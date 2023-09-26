@@ -4,7 +4,7 @@ const para = document.querySelector('#para')
 
 const data = localStorage.getItem('cartitems')
 const cartitem = JSON.parse(data);
-console.log(cartitem)
+//console.log(cartitem)
 
 
 function  backs() {
@@ -22,8 +22,11 @@ for(i = 0; i < cartitem.length; i++){
     <p><span class='bold'>price:</span>${cartitem[i].price}</p>
     <p><span class='bold'>quantity:</span>${cartitem[i].quantity}</p>
     <p><span class='bold'>total price:</span>${cartitem[i].totalprice=cartitem[i].price*cartitem[i].quantity}</p>
-    <button class='btn3' onclick='increase(${i})'>+</button>
-    <button class='btn3' onclick='decrease(${i})'>-</button>
+ <div class="btndiv">   
+ <button class='btn3' onclick='increase(${i})'>+</button>
+    <p style="margin-left: 20px; margin-top: 8px;">${cartitem[i].quantity}</p>
+    <button class='btn5' onclick='decrease(${i})'>-</button>
+    </div>
     <button  class='btn4' onclick='deletes(${i})'>delete</button>
 
     </div>`
@@ -33,13 +36,13 @@ rendercart()
 
 function increase(index) {
     cartdiv.innerHTML = ''
-    console.log(cartitem[index])
+  //  console.log(cartitem[index])
     cartitem[index].quantity += 1 
     rendercart()
 }
 function decrease(index) {
     cartdiv.innerHTML = ''
-    console.log(cartitem[index])
+    //console.log(cartitem[index])
     cartitem[index].quantity -= 1 
     rendercart()
     if(cartitem[index].quantity == 0 ){
@@ -53,32 +56,14 @@ function deletes(index) {
     cartitem.splice(index , 1)
     rendercart()
 }
-
-function totalprice() {
-    para.innerHTML = ""
-    let totalprice = 0
-    for(i = 0; i < cartitem.length; i++){
-        const itemtotal = cartitem[i].totalprice
-        totalprice+=itemtotal
+function total() {
+para.innerHTML = ""
+let totalprice = 0
+for(i = 0; i < cartitem.length; i++){
+    const itemtotal = cartitem[i].totalprice
+         totalprice+=itemtotal
+    //console.log(itemtotal);
         
-    }
-    para.innerHTML= `<p>total price: ${totalprice}</p>`
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+para.innerHTML= `<p>total price: ${totalprice}</p>`
+}

@@ -35,8 +35,8 @@
     padding: 17px;
     border-radius: 12px;
     background-color: rgb(20, 216, 20);
-    margin-left: 60px;
-    margin-top: 12px;
+    margin-left: 70rem;
+    margin-top: 24px;
     margin-bottom: 6px;
 }
 .btn2:hover{
@@ -63,6 +63,18 @@
     margin-top: 6px;
     margin-bottom: 3px;
 }
+.btn5{
+    padding: 5px;
+    border-radius: 2px;
+    background-color: rgb(152, 164, 152);
+    margin-left: 25px;
+    margin-top: 6px;
+    margin-bottom: 3px;
+
+}
+.btndiv{
+    display: flex;
+}
 .btn4{
     padding: 12px;
     border-radius: 12px;
@@ -74,10 +86,23 @@
 #para{
     padding-bottom: 2rem;
     padding-top: 2rem;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
 }
+.input{
+    padding: 12px;
+    border-radius: 7px;
+    width: 300px;
 
-
-
+}
+.b{
+    width: 90px;
+    height: 40px;
+    padding: 4px;
+    margin-top: 4px;
+    margin-right: 12px;
+}
 
 
 
