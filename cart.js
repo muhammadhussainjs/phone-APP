@@ -12,8 +12,9 @@ function  backs() {
 }
 
 function rendercart() {
+    let total = 0
 for(i = 0; i < cartitem.length; i++){
-    cartdiv.innerHTML +=`<div class='a'>
+    cartdiv.innerHTML +=`<div class='d'>
     <img class="image"src="${cartitem[i].img}" alt=""> 
     <p><span class='bold'>brand:</span> ${cartitem[i].brand}</p>
     <p> <span class='bold'>ram:</span> ${cartitem[i].ram}</p> 
@@ -30,7 +31,9 @@ for(i = 0; i < cartitem.length; i++){
     <button  class='btn4' onclick='deletes(${i})'>delete</button>
 
     </div>`
+    total += cartitem[i].totalprice
 }
+para.innerHTML = `totalprice = ${total}`
 }
 rendercart()
 
@@ -56,14 +59,29 @@ function deletes(index) {
     cartitem.splice(index , 1)
     rendercart()
 }
-function total() {
-para.innerHTML = ""
-let totalprice = 0
-for(i = 0; i < cartitem.length; i++){
-    const itemtotal = cartitem[i].totalprice
-         totalprice+=itemtotal
-    //console.log(itemtotal);
-        
-}
-para.innerHTML= `<p>total price: ${totalprice}</p>`
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

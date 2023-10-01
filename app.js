@@ -6,7 +6,8 @@ const phonearray = [
         brand: 'oppo',
         ram: '4gb',
         rom: '64 gb',
-        camera: '48megapx'
+        camera: '48megapx',
+        price: 85000
 
     },
     {
@@ -62,7 +63,7 @@ const phonearray = [
     for (i = 0; i < phonearray.length; i++) {
         maindiv.innerHTML +=`<div class="a"><img class="image"src="${phonearray[i].img}" alt=""> 
         <p><span class='bold'>brand</span> ${phonearray[i].brand}</p>
-        <p><span class='bold'>bram:</span>  ${phonearray[i].ram}</p> 
+        <p><span class='bold'>ram:</span>  ${phonearray[i].ram}</p> 
         <p><span class='bold'>rom:</span>  ${phonearray[i].rom}</p>
         <p> <span class='bold'>camera:</span>  ${phonearray[i].camera}</p>
         <p><span class='bold'>price:</span>${phonearray[i].price}</p>

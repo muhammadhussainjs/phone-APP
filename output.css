@@ -3,6 +3,19 @@
     border: 1px solid black;
     gap: 10;
     margin-top: 20px;
+    width: 300px;
+    height: 500px;
+    background-color: lightslategrey;
+}
+.d{
+    border-radius: 20px;
+    border: 1px solid black;
+    gap: 10;
+    margin-top: 20px;
+    width: 300px;
+    height: 600px;
+    background-color: lightslategray
+
 }
 #maindiv{
     display: flex;
@@ -23,7 +36,7 @@
     border-radius: 8px;
     background-color: rgb(26, 172, 221);
     margin-top: 10px;
-    margin-left: 6px;
+    margin-left: 65px;
     margin-bottom: 3px;
     
    
@@ -46,20 +59,21 @@
     font-size: medium;
     font-weight: 200;
     font-weight: bold;
+    margin-left: 18px;
 }
 .image{
     width: 250px;
     height: 300px;
-    object-fit: cover;
-    overflow: hidden;
     border-radius: 20px;
+    margin-left: 18px;
+    margin-top: 12px;
 
 }
 .btn3{
     padding: 5px;
     border-radius: 2px;
     background-color: rgb(152, 164, 152);
-    margin-left: 3px;
+    margin-left: 18px;
     margin-top: 6px;
     margin-bottom: 3px;
 }
