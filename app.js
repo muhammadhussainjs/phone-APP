@@ -1,5 +1,11 @@
 const maindiv = document.querySelector('#maindiv');
-const cartarray = []
+
+const dataa = localStorage.getItem('cartitems')
+const data = JSON.parse(dataa)
+console.log(dataa);
+
+
+const cartarray = [...data]
 const phonearray = [
     {
         img: "./asset/oppo f11.jpg",
@@ -77,7 +83,6 @@ const phonearray = [
             for(i =0; i < cartarray.length; i++){
                 if(cartarray[i] === phonearray[index]){
                cartarray[index].quantity += 1
-              console.log(cartarray);
                 }
             }
             }

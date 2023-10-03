@@ -9,6 +9,8 @@ const cartitem = JSON.parse(data);
 
 function  backs() {
     window.location = 'index.html'
+    localStorage.setItem('cartitems' , items)
+
 }
 
 function rendercart() {
@@ -24,9 +26,9 @@ for(i = 0; i < cartitem.length; i++){
     <p><span class='bold'>quantity:</span>${cartitem[i].quantity}</p>
     <p><span class='bold'>total price:</span>${cartitem[i].totalprice=cartitem[i].price*cartitem[i].quantity}</p>
  <div class="btndiv">   
+ <button class='btn5' onclick='decrease(${i})'>-</button>
+ <p style="margin-left: 20px; margin-top: 8px;">${cartitem[i].quantity}</p>
  <button class='btn3' onclick='increase(${i})'>+</button>
-    <p style="margin-left: 20px; margin-top: 8px;">${cartitem[i].quantity}</p>
-    <button class='btn5' onclick='decrease(${i})'>-</button>
     </div>
     <button  class='btn4' onclick='deletes(${i})'>delete</button>
 
@@ -59,6 +61,22 @@ function deletes(index) {
     cartitem.splice(index , 1)
     rendercart()
 }
+
+window.onbeforeunload = function() {
+    const items = JSON.stringify(cartitem)
+    localStorage.setItem('cartitems' , items)
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
