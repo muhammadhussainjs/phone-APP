@@ -542,16 +542,24 @@ video {
   display: flex;
 }
 
-.w-32 {
-  width: 8rem;
-}
-
 .justify-between {
   justify-content: space-between;
 }
 
 .gap-96 {
   gap: 24rem;
+}
+
+.gap-0 {
+  gap: 0px;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .rounded-md {
@@ -583,4 +591,28 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:gap-10 {
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
+  .md\:gap-96 {
+    gap: 24rem;
+  }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,120 +9,38 @@
     <link rel="stylesheet" href="output.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body style="background-color: lightgray;">
-    <div style="padding: 20px; background-color: rgb(13, 188, 246);">
+
+   <div class="md:flex md:gap-96  bg-blue-300 p-2">
+        <div>
+            <nav>
+                <ul class="md:flex md:justify-between md:gap-96 sm:flex sm:gap-10 flex gap-10">
+                    <li>
+                        <p class="font-bold text-2xl">PRICE OYE</p>
+                    </li>
+                    <li class="mt-1"><input type="text" name="" id="" placeholder=" search..." class="input"></li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div style="display: flex; @media (max-width: 700px) {margin-right: 200px;}">
+            <button id="login" class="rounded-md b bg-white" style=" border: 1px solid black;">login</button>
+            <button class="rounded-md b" style=" border: 1px solid black;">register</button>
+        </div>
+    </div>
+
+
+    <div>
+        <img src="./asset/main.jpg" alt="">
+    </div>
+
+    <button class="btn2 " onclick="checkouts()">check out</button>
+
+    <div id="maindiv">
 
     </div>
-    <div class="flex gap-96  bg-blue-300 p-2">
-    <div style="display: flex;">
-    <nav>
-        <ul class="flex justify-between gap-96">
-            <li><p class="font-bold text-2xl" >PRICE OYE</p></li>     
-            <li class="mt-1"><input type="text" name="" id="" placeholder=" search..." class="input"></li>
-        </ul>
-    </nav>
-</div>
-
-
-<div style="display: flex;">
-    <button class="rounded-md b bg-white"
-    style=" border: 1px solid black;">login</button>
-    <button class="rounded-md b "
-    style=" border: 1px solid black;">register</button>
-</div>
-</div>
-<div>
-    <img src="./asset/pakistan-priceoye-sale-slider-il76q.jpg" alt="">
-</div>
-
-<button class="btn2" onclick="checkouts()">check out</button>
-
-<div id="maindiv">
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -136,4 +55,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>

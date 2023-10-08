@@ -47,13 +47,12 @@
 .btn2{
     padding: 17px;
     border-radius: 12px;
-    background-color: rgb(20, 216, 20);
-    margin-left: 70rem;
+    background-color: rgb(0, 191, 255);  
     margin-top: 24px;
     margin-bottom: 6px;
 }
 .btn2:hover{
-    background-color: rgb(38, 147, 38);
+    background-color: rgb(35, 149, 188);
 }
 .bold{
     font-size: medium;

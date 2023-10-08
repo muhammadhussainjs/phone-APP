@@ -1,11 +1,18 @@
 const maindiv = document.querySelector('#maindiv');
+ //const login = document.querySelector('#login')
 
-const dataa = localStorage.getItem('cartitems')
-const data = JSON.parse(dataa)
-console.log(dataa);
+// const log = localStorage.getItem('login')
+// const log1 = JSON.parse(log)
+// console.log(log1);
 
 
-const cartarray = [...data]
+
+const cartdata = localStorage.getItem('cartitems')
+const cartitem = JSON.parse(cartdata)
+console.log(cartitem);
+
+const cartarray = [...cartitem]
+
 const phonearray = [
     {
         img: "./asset/oppo f11.jpg",
@@ -14,7 +21,7 @@ const phonearray = [
         rom: '64 gb',
         camera: '48megapx',
         price: 85000
-
+        
     },
     {
         img: "./asset/samsung s20.avif", 
@@ -24,7 +31,7 @@ const phonearray = [
         camera: '48megapx',
         price: 55000
     },
-     {
+    {
         img: "./asset/iphone 14.webp",
         brand: 'iphone',
         ram: '4gb',
@@ -64,109 +71,63 @@ const phonearray = [
         camera: '48megapx',
         price: 15000
     }, 
-   
+    
 ]
-    for (i = 0; i < phonearray.length; i++) {
-        maindiv.innerHTML +=`<div class="a"><img class="image"src="${phonearray[i].img}" alt=""> 
-        <p><span class='bold'>brand</span> ${phonearray[i].brand}</p>
-        <p><span class='bold'>ram:</span>  ${phonearray[i].ram}</p> 
-        <p><span class='bold'>rom:</span>  ${phonearray[i].rom}</p>
-        <p> <span class='bold'>camera:</span>  ${phonearray[i].camera}</p>
-        <p><span class='bold'>price:</span>${phonearray[i].price}</p>
-        <button class="btn1" onclick="addtocart(${i})">add to cart</button>
-        </div>`
+for (i = 0; i < phonearray.length; i++) {
+    maindiv.innerHTML +=`<div class="a"><img class="image"src="${phonearray[i].img}" alt=""> 
+    <p><span class='bold'>BRAND:</span> ${phonearray[i].brand}</p>
+    <p><span class='bold'>RAM:</span>  ${phonearray[i].ram}</p> 
+    <p><span class='bold'>ROM:</span>  ${phonearray[i].rom}</p>
+    <p> <span class='bold'>CAMERA:</span>  ${phonearray[i].camera}</p>
+    <p><span class='bold'>PRICE:</span>${phonearray[i].price}</p>
+    <button class="btn1" onclick="addtocart(${i})">ADD TO CART</button>
+    </div>`
     }
     
     function addtocart(index) {
         
-           if (cartarray.includes(phonearray[index])){
-            for(i =0; i < cartarray.length; i++){
+        if (cartarray.includes(phonearray[index])){
+            
+            for(i = 0; i < cartarray.length; i++){
                 if(cartarray[i] === phonearray[index]){
-               cartarray[index].quantity += 1
+                    cartarray[index].quantity += 1
+                    
+                    
+                    
                 }
-            }
-            }
+            }   
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+        })
+    }
             else{
                 phonearray[index].quantity = 1
                 cartarray.push(phonearray[index])
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Your work has been saved',
-            showConfirmButton: false,
-            timer: 1500
-        })
-        console.log('else' , cartarray );
-    }
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Your work has been saved',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                // console.log('else' , cartarray );
+            }
 }
 
         
-        
-        function checkouts() {
-            window.location = "cart.html";
-            const item = JSON.stringify(cartarray);
-            localStorage.setItem('cartitems' , item);
-    }
 
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function checkouts() {
+    window.location = "cart.html";
+    const item = JSON.stringify(cartarray);
+    localStorage.setItem('cart' , item);
+}
+// login.addEventListener('click' , () => {
+//     window.location = 'login.html'
+// })
 
 
 
