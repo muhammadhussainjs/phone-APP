@@ -11,7 +11,7 @@ const cartdata = localStorage.getItem('cartphone')
 const cartitem = JSON.parse(cartdata)
 console.log(cartitem);
 
-const cartarray = [...cartitem]
+const cartarray = []
 
 const phonearray = [
     {
