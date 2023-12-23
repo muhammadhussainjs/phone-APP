@@ -64,7 +64,7 @@ function deletes(index) {
 
 window.onbeforeunload = function () {
     const items = JSON.stringify(cartitem)
-    localStorage.setItem('cartitems', items)
+    localStorage.setItem('cartphone', items)
 }
 
 

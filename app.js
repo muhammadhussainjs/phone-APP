@@ -7,7 +7,7 @@ const maindiv = document.querySelector('#maindiv');
 
 
 
-const cartdata = localStorage.getItem('cartitems')
+const cartdata = localStorage.getItem('cartphone')
 const cartitem = JSON.parse(cartdata)
 console.log(cartitem);
 
@@ -82,15 +82,16 @@ for (i = 0; i < phonearray.length; i++) {
     <p><span class='bold'>PRICE:</span>${phonearray[i].price}</p>
     <button class="btn1" onclick="addtocart(${i})">ADD TO CART</button>
     </div>`
-    }
-    
-    function addtocart(index) {
+}
+
         
+    function addtocart(index) {
+               
         if (cartarray.includes(phonearray[index])){
             
             for(i = 0; i < cartarray.length; i++){
                 if(cartarray[i] === phonearray[index]){
-                    cartarray[index].quantity += 1
+                    cartarray[i].quantity += 1
                     
                     
                     
@@ -104,6 +105,7 @@ for (i = 0; i < phonearray.length; i++) {
                 timer: 1500
         })
     }
+   
             else{
                 phonearray[index].quantity = 1
                 cartarray.push(phonearray[index])
